@@ -1,0 +1,71 @@
+
+  <ion-content >
+  <img [routerLink]="['/opciones']"  src="https://www.homag.com/fileadmin/product/paneldividing/machines/panelsaw-SAWTEQ-B-500.jpg"/>
+<div>
+
+<ion-button class="lub" size="default" expand="block" color="dark"
+[routerLink]="['/lubricacion']"   >
+PUNTOS DE LUBRICACION 
+<ion-icon name="color-fill-outline" slot = "start"></ion-icon>
+</ion-button>
+
+<ion-button class="lub" size="default" expand="block" color="dark"  [routerLink]="['/electronico']"  >
+ MANTENIMIENTO ELECTRONICO
+ <ion-icon name="flash-outline" slot = "start" ></ion-icon>
+</ion-button>
+
+<ion-button class="lub" size="default" expand="block" color="dark"
+[routerLink]="['/neumatico']"   >
+MANTENIMIENTO NEUMATICO
+<ion-icon name="funnel-outline" slot = "start" ></ion-icon>
+</ion-button>
+
+
+<ion-button class="lub" size="default" expand="block" color="dark"
+[routerLink]="['/hidraulico']"   >
+MANTENIMIENTO HIDRAULICO
+  <ion-icon name="key-outline" slot="start"></ion-icon>
+</ion-button>
+
+
+<ion-button class="lub" size="default" expand="block" color="dark"
+[routerLink]="['/mecanico']"   >
+MANTENIMIENTO MECANICO
+<ion-icon name="construct-outline" slot="start" ></ion-icon>
+</ion-button>
+
+
+</div>
+
+
+<ion-grid >
+  <ion-row  >
+    <ion-button color="secundary">
+      <ion-col >Tiempo: </ion-col>
+      
+      
+      <ion-col >
+        <div >
+          0{{tiempo.minutos}}
+         </div>
+       </ion-col>
+       
+       <ion-col >
+         <div *ngIf="tiempo.segundos <10">
+           0{{tiempo.segundos}}
+         </div>
+         
+         <div *ngIf="tiempo.segundos >=10">
+  {{tiempo.segundos}}
+ </div>
+ 
+</ion-col>
+
+</ion-button>
+</ion-row>
+</ion-grid>
+
+
+
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-button expand="block" [routerLink]="['/mantenimientos']" class="bt2" color="light">
+    <ion-icon name="return-up-back-sharp" slot="start"></ion-icon>
+  </ion-button>
+
+  
+  <ion-card>
+
+    <img src="https://www.homag.com/fileadmin/product/paneldividing/machines/panelsaw-SAWTEQ-B-500.jpg"/>
+    
+<ion-card-content>
+  <ion-card-title>
+    <h2>
+
+SECCIONADORA HOMAG HPP-250
+  </h2>
+</ion-card-title>
+<ion-list>
+<ion-item>
+<ion-progress-bar color="primary" value="0.8"></ion-progress-bar>
+</ion-item>
+</ion-list>
+</ion-card-content>    
+</ion-card>
+
+
+
+
+     <ion-grid >
+       <ion-row  >
+         <ion-button color="secundary">
+           <ion-col >Tiempo: </ion-col>
+           
+           
+           <ion-col >
+             <div >
+               0{{tiempo.minutos}}
+              </div>
+            </ion-col>
+            
+            <ion-col >
+              <div *ngIf="tiempo.segundos <10">
+                0{{tiempo.segundos}}
+              </div>
+              
+              <div *ngIf="tiempo.segundos >=10">
+       {{tiempo.segundos}}
+      </div>
+      
+    </ion-col>
+    
+  </ion-button>
+</ion-row>
+</ion-grid>
+
+</ion-content>
